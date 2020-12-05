@@ -1,0 +1,313 @@
+body{
+  background-color:#f1f3f6;
+}
+.wrapper{
+  background-image: url(../img/bg.jpg);
+  background-position: center;
+  background-size: 100%;
+}
+.container {
+    max-width: 1470px;
+    margin: 0 auto;
+    padding: 0px 10px;
+}
+.header{
+  position: fixed;
+  width: 100%;
+  top:0;
+  left: 0;
+  z-index: 50;
+}
+.header:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  background-image: url(../img/bg.jpg);
+  background-position: center;
+  background-size: 100%;
+}
+.header__body{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80px;
+
+}
+.header__logo {
+    text-decoration: none;
+    color: #fff;
+    z-index: 5;
+    font-size: 29px;
+    font-weight: 600;
+    width: 100px;
+}
+.header__list {
+    display: flex;
+    position: relative;
+    z-index: 4;
+    padding-top: 11px;
+}
+.header__list li {
+  margin-left: 50px;
+}
+.header__body{
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+}
+.header__link {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 200;
+}
+.header__burger{
+  display: none;
+}
+.nav__button {
+    justify-content: end;
+    margin-right: 100px;
+    margin-top: 30px;
+}
+.btn {
+    width: 150px;
+    height: 37px;
+    background: inherit;
+    color: #fff;
+    font-size: 21px;
+    border: none;
+}
+.btn:hover{
+  border: 1px solid #fff;
+  transition: all .3s ease .3s;
+}
+.header__menu {
+    margin-right: 20%;
+}
+.content__text {
+    max-width: 100%;
+    min-width: 128px;
+    padding-bottom: 116px;
+}
+.content__text p {
+    color: #fff;
+    font-size: 54px;
+    font-weight: 600;
+    padding-top: 79px;
+  }
+.btn-main{
+      background-color: #fff;
+      color:#000;
+      text-transform: uppercase;
+      padding: 10px;
+      font-size: 17px;
+      font-weight: 600;
+      transition: 0.3s;
+      margin-top: 40px;
+    }
+    .btn-main:hover{
+          box-shadow: -13px 11px 7px 0px ;
+          transition: 0.3s;
+    }
+@media (max-width:767px) {
+  body.lock{
+    overflow: hidden;
+  }
+  .header__body{
+    height: 50px;
+  }
+  .header__burger {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      z-index: 3;
+      left:66%;
+  }
+  .header__burger:before,.header__burger:after{
+    content: "";
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+  }
+  .header__burger span{
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    top:9px;
+    transition: all .3s ease .3s;
+  }
+  .header__burger:before{
+    top:0;
+    z-index: 3;
+        transition: all .3s ease .3s;
+  }
+  .header__burger:after{
+    bottom: 0;
+        transition: all .3s ease .3s;
+  }
+  .header__burger.active:before{
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header__burger.active::after{
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header__burger.active span{
+    transform: scale(0);
+  }
+  .header__menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #18b5a4;
+    padding: 70px 10px 20px 10px;
+    top: -120%;
+      transition: all .3s ease .3s;
+  }
+  .header__menu.active{
+   top: 0;
+
+  }
+  .header__list {
+      display: block;
+      text-align: end;
+      padding-right: 48px;
+  }
+  .header__list li {
+    margin: 0px 0px 20px 0px;
+  }
+}
+@media (max-width:500px) {
+  .header__burger {
+    left: 34%;
+  }
+}
+.container__main {
+    max-width: 1684px ;
+    margin-left: auto;
+    margin-top: -85px;
+}
+
+@media (max-width:767px) {
+  .nav__button {
+    margin-right: 317px;
+}
+}
+@media (max-width: 580px){
+.nav__button {
+    margin-right:80px;
+}
+}
+@media (max-width: 500px){.header__burger {
+    left: 54%;
+}
+}
+.content{
+  padding: 200px 0px 0px 0px;
+}
+.content__text {
+    font-size: 16px;
+    line-height: 1.2;
+}
+.content__text p{
+  padding: 0px 0px 20px 0px;
+}
+.main {
+    margin-left: auto;
+    background-image: none;
+}
+.feature {
+    display: flex;
+    background-color: #fff;
+    background-image: none;
+      padding: 100px
+}
+.feature__items {
+    padding-right: 150px;
+    padding-left: 50px;
+}
+p.feature__title {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+p.feature__info {
+    width: 300px;
+    font-size: 20px;
+}
+p.feature__logo {
+    padding-top: 42px;
+}
+@media (max-width:1460px) {
+  .feature__items {
+      padding-right: 150px;
+  }
+  p.feature__info {
+    width: 218px;
+    font-size: 20px;
+}
+}
+@media (max-width:978px) {
+  .feature {
+      display: grid;
+      grid-template-columns: 163px 163px;
+      grid-gap: 129px;
+    }
+}
+
+.funds {
+    display: flex;
+    color: #000;
+    bottom: 0;
+    padding: 125px 51px 53px 106px;
+}
+.fund__logo {
+    font-size: 50px;
+    font-weight: 600;
+    width: 400px;
+    margin-left: 32px;
+}
+.fund__info {
+    width: 550px;
+    font-size: 25px;
+    margin-left: 233px;
+    line-height: 1.5;
+}
+@media (max-width:580px) {
+  .feature {
+      display: flex;
+      flex-direction: column;
+      padding: 40px;
+    }
+  .funds{
+    flex-direction: column;
+    padding: 0;
+  }
+  .fund__logo {
+    width: 281px;
+    margin-top: 24px;
+}
+  .fund__info {
+      width: 100%;
+      text-align: center;
+      font-size: 25px;
+      margin-left: 0;
+      margin-top: 48px;
+  }
+}
